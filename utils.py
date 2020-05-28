@@ -74,6 +74,7 @@ def generate_annotations(filename_txt_path, anno_dir, img2id, cat2id):
                 'image_id': img2id[filename],
                 'category_id': cat2id[cat],
                 'bbox': [xmin, ymin, xmax - xmin, ymax - ymin],
+                'area': (xmax - xmin) * (ymax - ymin), 
                 'iscrowd': 0
             }
 
